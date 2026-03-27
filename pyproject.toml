@@ -8,7 +8,6 @@ dependencies = [
     "subjective-abstract-data-source-package @ git+https://github.com/Subjective-Technologies/subjective-abstract-data-source-package.git",
     "brainboost-data-source-logger-package @ git+https://github.com/Subjective-Technologies/brainboost_data_source_logger_package.git",
     "brainboost-configuration-package @ git+https://github.com/Subjective-Technologies/brainboost_configuration_package.git",
-    "duckduckgo-search>=7.0.0",
     "requests>=2.28.0",
     "beautifulsoup4>=4.12.0",
 ]
