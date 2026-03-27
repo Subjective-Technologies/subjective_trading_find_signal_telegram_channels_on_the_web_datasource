@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071421"/>
+      <stop offset="0.55" stop-color="#0B1020"/>
+      <stop offset="1" stop-color="#17091E"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22 18) rotate(33) scale(31 23)">
+      <stop stop-color="#0EE7FF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#0EE7FF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="border" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#18F0FF"/>
+      <stop offset="1" stop-color="#63FFB0"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="12" y1="18" x2="52" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0C1C2A" stop-opacity="0.88"/>
+      <stop offset="1" stop-color="#111728" stop-opacity="0.36"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="15" y1="45" x2="48" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62FFB3"/>
+      <stop offset="0.45" stop-color="#1BE7FF"/>
+      <stop offset="1" stop-color="#A9F6FF"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="30" y1="14" x2="49" y2="33" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1AE7FF"/>
+      <stop offset="1" stop-color="#167DFF"/>
+    </linearGradient>
+    <linearGradient id="plane" x1="35" y1="20" x2="44" y2="30" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C8F3FF"/>
+    </linearGradient>
+    <filter id="glow" x="-35%" y="-35%" width="170%" height="170%">
+      <feGaussianBlur stdDeviation="2.4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow" x="-45%" y="-45%" width="190%" height="190%">
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0.98  0 0 1 0 1  0 0 0 0.55 0"/>
+    </filter>
+  </defs>
+
+  <rect x="4" y="4" width="56" height="56" rx="16" fill="url(#bg)"/>
+  <rect x="4.75" y="4.75" width="54.5" height="54.5" rx="15.25" stroke="url(#border)" stroke-opacity="0.55" stroke-width="1.5"/>
+  <rect x="10" y="10" width="44" height="44" rx="12" fill="url(#spot)"/>
+
+  <rect x="12" y="18" width="40" height="30" rx="10" fill="url(#panel)" stroke="#7AF5FF" stroke-opacity="0.08"/>
+  <path d="M18 23H46" stroke="#7AF5FF" stroke-opacity="0.08"/>
+  <path d="M18 31H46" stroke="#7AF5FF" stroke-opacity="0.08"/>
+  <path d="M18 39H46" stroke="#7AF5FF" stroke-opacity="0.08"/>
+  <path d="M22 21V45" stroke="#7AF5FF" stroke-opacity="0.06"/>
+  <path d="M32 21V45" stroke="#7AF5FF" stroke-opacity="0.06"/>
+  <path d="M42 21V45" stroke="#7AF5FF" stroke-opacity="0.06"/>
+
+  <g filter="url(#glow)">
+    <path d="M14.5 45C17.5 43.8 19.5 41.5 22 38.2C24.1 35.6 26.3 34.3 29.2 35.7C31.5 36.8 34 35 36.4 31.6C39.4 27.4 42.2 24.3 47.5 18.7" stroke="url(#signal)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="47.5" cy="18.7" r="2.4" fill="#B7FBFF"/>
+  </g>
+
+  <g>
+    <path d="M18 43V33" stroke="#6AFFB7" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="16.2" y="36.2" width="3.6" height="6.2" rx="1.2" fill="#6AFFB7"/>
+
+    <path d="M26 46V27" stroke="#20E8FF" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="24.2" y="31.5" width="3.6" height="9.2" rx="1.2" fill="#20E8FF"/>
+
+    <path d="M34 41V23" stroke="#FF5B9D" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="32.2" y="26.5" width="3.6" height="8.6" rx="1.2" fill="#FF5B9D"/>
+
+    <path d="M42 34V17" stroke="#67FFB2" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="40.2" y="20.3" width="3.6" height="7.8" rx="1.2" fill="#67FFB2"/>
+  </g>
+
+  <circle cx="40" cy="25" r="12.6" fill="#1BE7FF" fill-opacity="0.18" filter="url(#softGlow)"/>
+  <circle cx="40" cy="25" r="11.2" fill="url(#badge)"/>
+  <circle cx="40" cy="25" r="10.7" stroke="#D7FBFF" stroke-opacity="0.52"/>
+  <path d="M34.4 25.2L45.2 20.4C45.9 20.1 46.6 20.8 46.3 21.5L41.5 32.2C41.1 33 39.9 33.1 39.5 32.3L37.5 28.4L34.9 26.4C34.2 25.9 33.7 25.5 34.4 25.2Z" fill="url(#plane)"/>
+  <path d="M37.5 28.4L45.2 20.4L39.2 29.6" stroke="#0D84C1" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M34.9 26.4L39.7 27.5" stroke="#0D84C1" stroke-width="1.1" stroke-linecap="round"/>
+
+  <g filter="url(#glow)">
+    <path d="M50.5 11.5L51.5 14L54 15L51.5 16L50.5 18.5L49.5 16L47 15L49.5 14L50.5 11.5Z" fill="#93F8FF"/>
+  </g>
+</svg>
